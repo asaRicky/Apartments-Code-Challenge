@@ -1,4 +1,5 @@
 class LeasesController < ApplicationController
+
     before_action :set_lease, only: [:show, :destroy]
   
     def index
@@ -39,4 +40,4 @@ class LeasesController < ApplicationController
       params.require(:lease).permit(:rent, :apartment_id, :tenant_id)
     end
   end
-  
+ 

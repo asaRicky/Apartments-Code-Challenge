@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  This: MyString
+  AssignmentGitHub: MyString
+  RepoCreate: MyString
+  New: MyString
+  Issue: MyString
+
+two:
+  This: MyString
+  AssignmentGitHub: MyString
+  RepoCreate: MyString
+  New: MyString
+  Issue: MyString
