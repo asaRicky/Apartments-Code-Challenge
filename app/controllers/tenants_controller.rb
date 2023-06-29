@@ -10,18 +10,19 @@ class TenantsController < ApplicationController
     end
 
     def create
-        @tenant=Tenant.create(tenant_params)
-        if @tenant
+        @tenant=Tenant.new(tenant_params)
+        if @tenant.save
             render json :@tenant ,status :created
         else render json :@tenant.errors,status: :unprocessable_entity
     end
+        end
 
     def update
         if @tenant.update(tenant_params)
         render json :@tenant
         else render json : @tenant.errors,status: :unprocessable_entity
         end
-
+    end
         def destroy
             @tenant.destroy
             if @tenant.destroyed?
@@ -37,5 +38,4 @@ class TenantsController < ApplicationController
         def tenant_params
             params.require(:tenant).permit(:name,:age)
         end
-    end
-end
+   end
