@@ -10,6 +10,35 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2023_06_29_083700) do
+
+  create_table "apartments", force: :cascade do |t|
+    t.integer "number"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "forks", force: :cascade do |t|
+    t.string "This"
+    t.string "AssignmentGitHub"
+    t.string "RepoCreate"
+    t.string "New"
+    t.string "Issue"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "leases", force: :cascade do |t|
+    t.string "rent"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "tenants", force: :cascade do |t|
+    t.string "name"
+    t.integer "age"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
 end
