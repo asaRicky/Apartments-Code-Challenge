@@ -1,2 +1,3 @@
 class Lease < ApplicationRecord
+    
 end
